@@ -7,7 +7,7 @@ type ButtonType = Children & ComponentPropsWithoutRef<typeof Button>
 
 function ButtonCustom({ children, ...props }: ButtonType) {
   return (
-    <Button className="cursor-pointer  w-full" {...props}> 
+    <Button className="w-full cursor-pointer" {...props}>
       {children}
     </Button>
   )

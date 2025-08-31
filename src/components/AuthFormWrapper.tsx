@@ -33,8 +33,8 @@ export function AuthFormWrapper({
   footerLinkTo,
 }: AuthFormWrapperProps) {
   return (
-    <div className="flex w-full items-center justify-center p-4 sm:p-6 lg:p-8">
-      <Card className="animate-fade-in w-full max-w-md shadow-lg">
+    <div className="flex w-full items-center justify-center p-1 sm:p-6 md:p-8">
+      <Card className="animate-fade-in w-full max-w-md border-none shadow-none sm:border sm:shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold tracking-tight">
             {title}
@@ -44,27 +44,31 @@ export function AuthFormWrapper({
         <CardContent>
           {children}
 
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t" />
-            </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-card text-muted-foreground px-2">یا</span>
-            </div>
-          </div>
+          {socialLoginLabel && onSocialLoginClick && (
+            <>
+              <div className="relative my-4 md:my-6">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="w-full border-t" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-card text-muted-foreground px-2">یا</span>
+                </div>
+              </div>
 
-          <ButtonCustom
-            variant="outline"
-            type="button"
-            className="w-full"
-            onClick={onSocialLoginClick}
-          >
-            <GoogleIcon />
-            {socialLoginLabel}
-          </ButtonCustom>
+              <ButtonCustom
+                variant="outline"
+                type="button"
+                className="w-full"
+                onClick={onSocialLoginClick}
+              >
+                <GoogleIcon />
+                {socialLoginLabel}
+              </ButtonCustom>
+            </>
+          )}
         </CardContent>
         <CardFooter className="flex justify-center text-sm">
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-center">
             {footerText}
             <Link
               to={footerLinkTo}

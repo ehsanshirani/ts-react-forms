@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+پروژه فرم‌های پیشرفته با React و TypeScript
+یک نمونه پروژه کامل و مدرن برای نمایش نحوه‌ی ساخت فرم‌های احراز هویت (ورود، ثبت‌نام و...) با تمرکز بر روی معماری ماژولار، کامپوننت‌های قابل استفاده مجدد و تایپ سیفتی کامل.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 درباره پروژه
+این پروژه با هدف پیاده‌سازی یک سیستم احراز هویت کامل در فرانت‌اند با استفاده از به‌روزترین و بهترین ابزارهای اکوسیستم ری‌اکت توسعه داده شده است. تمرکز اصلی این پروژه بر روی معماری تمیز (Clean Architecture) و ساخت کامپوننت‌هایی است که نه تنها از نظر ظاهری زیبا و مدرن هستند، بلکه به شدت قابل استفاده مجدد (Reusable) و قابل نگهداری (Maintainable) می‌باشند.
 
-Currently, two official plugins are available:
+در این پروژه، شما می‌توانید الگوهای پیشرفته‌ای برای موارد زیر پیدا کنید:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ساخت کامپوننت‌های UI کاملاً کاستوم و ریوزیبل.
 
-## Expanding the ESLint configuration
+مدیریت پیشرفته وضعیت فرم‌ها و اعتبارسنجی داده‌ها.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+پیاده‌سازی انیمیشن‌های روان برای بهبود تجربه کاربری (UX).
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+ایجاد یک پایگاه کد کاملاً تایپ-سیف با TypeScript.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+✨ ویژگی‌ها
+معماری ماژولار: تفکیک کامل منطق (Smart Components) از نمایش (Dumb Components).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+کامپوننت‌های ریوزیبل: کامپوننت‌های CustomFormField و AuthFormWrapper برای جلوگیری از تکرار کد.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+طراحی کاملاً ریسپانسیو: تجربه‌ی کاربری یکپارچه در دسکتاپ و موبایل.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+مدیریت فرم پیشرفته: استفاده از React Hook Form برای عملکرد بهینه و Zod برای اعتبارسنجی قدرتمند.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+انیمیشن‌های زیبا: انیمیشن‌های روان برای جابجایی بین صفحات و نمایش خطاها با استفاده از Framer Motion.
+
+پشتیبانی از چندزبانگی: پیاده‌سازی زیرساخت لازم برای چندزبانه کردن پروژه با i18next.
+
+تایپ سیفتی کامل: استفاده از TypeScript در تمام بخش‌های پروژه برای کاهش خطا و افزایش خوانایی کد.
+
+🛠️ ابزارهای استفاده شده
+لیستی از تکنولوژی‌ها و کتابخانه‌های اصلی که در این پروژه به کار رفته‌اند:
+
+دسته
+
+ابزار
+
+فریمورک
+
+React
+
+زبان
+
+TypeScript
+
+استایل‌دهی
+
+Tailwind CSS
+
+کامپوننت‌های UI
+
+shadcn/ui
+
+مدیریت فرم
+
+React Hook Form
+
+اعتبارسنجی
+
+Zod
+
+انیمیشن
+
+Framer Motion
+
+روتینگ
+
+React Router DOM
+
+چندزبانگی (i18n)
+
+i18next
+
+نوتیفیکیشن
+
+Sonner
+
+⚙️ راه‌اندازی پروژه
+برای اجرای این پروژه به صورت محلی، مراحل زیر را دنبال کنید:
+
+۱. پیش‌نیازها:
+مطمئن شوید که Node.js و npm (یا yarn) روی سیستم شما نصب شده باشند.
+
+۲. کلون کردن ریپازیتوری:
+
+git clone [https://github.com/ehsanshirani/ts-react-forms.git](https://github.com/ehsanshirani/ts-react-forms.git)
+
+۳. نصب وابستگی‌ها:
+وارد پوشه‌ی پروژه شوید و وابستگی‌ها را نصب کنید:
+
+cd ts-react-forms
+npm install
+
+یا با Yarn:
+
+yarn
+
+۴. اجرای سرور توسعه:
+پروژه را در حالت توسعه اجرا کنید:
+
+npm run dev
+
+حالا می‌توانید پروژه را در آدرس http://localhost:5173 (یا پورت دیگری که در ترمینال شما نمایش داده می‌شود) مشاهده کنید.
